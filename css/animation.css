@@ -1,0 +1,88 @@
+/*..................................Carousel Animation........................*/
+@keyframes carousel_opacity{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+@keyframes carousel_radio1_p{
+    0%{
+        transform: translate(-1000px, -400px);
+        opacity: 0;
+    }
+    100%{
+        transform: translate(0px);
+        opacity: 1;
+    }
+}
+@keyframes carousel_radio1_inner_big{
+    0%{
+        transform: translateX(-1000px);
+    }
+    100%{
+        transform: translateX(0px);
+    }
+}
+@keyframes carousel_radio2_p{
+    0%{
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+@keyframes carousel_radio2_inner_big{
+    0%{
+        transform: translateY(80px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+@keyframes carousel_radio3_p{
+    0%{
+        transform: translateX(2000px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+@keyframes carousel_radio3_inner_big{
+    0%{
+        transform: translate(20px,50px);
+        opacity: 0;
+    }
+    100%{
+        transform: translate(0px);
+        opacity: 1;
+    }
+}
+@keyframes carousel_inner_link{
+    from{
+        transform: translateY(60px);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+/*............................Section Power Build Animation.................*/
+@keyframes build_txt{
+    0%{
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}

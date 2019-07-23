@@ -1,0 +1,244 @@
+/*............................Header Top Responsive..........................*/
+@media screen and (max-width: 450px){
+    .top_header_menu{
+        padding: inherit;
+    }
+    .top_header_connect>span{
+        padding-right: 5px;
+    }
+}
+@media screen and (max-width: 300px){
+    .top_header_connect>span{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 760px){
+    .bottom_header_menu_wrapper{
+        flex-flow: row wrap;
+        justify-content: flex-end;
+    }
+    .bottom_header_menu_wrapper>.email_address{
+        margin-top: 10px;
+        display: none;
+    }
+    .bottom_header_menu .value{
+        display: none;
+    }
+    .top_header_menu{
+        padding: 0px;
+    }
+}
+
+@media screen and (max-width: 538px){
+    .bottom_header_menu_wrapper>.skype_chat{
+        margin: 10px;
+        flex: 1;
+        padding: 10px 25px;
+    }
+}
+/*-------------
+    ---------*/
+/*................................Nav Responsive.......................*/
+@media screen and (max-width: 840px){
+    .header_nav>label{
+        display: inline-block;
+        padding: 20px;
+        color: white;
+        cursor: pointer;
+        position: relative;
+    }
+    .header_nav>ul{
+        transform: scaleY(0);
+        margin: 0px;
+        padding: 0px;
+        transition: 1s height;
+        display: block;
+        transform-origin: top;
+        height: 0px;
+        opacity: 0;
+        overflow: auto;
+    }
+    .header_nav>ul>li{
+        margin: 0px;
+        padding: 0px;
+        display: block;
+        width: 100%;
+    }
+    .header_nav>ul>li>a{
+        display: block;
+        border: 1px solid;
+        border-color: rgba(255, 255, 255,.05) transparent transparent rgba(255, 255, 255,0.05);
+    }
+    .header_nav>label>i{
+        position: absolute;
+        font-size: 25px;
+        /* margin-bottom: -68px; */
+        margin-top: -10px;
+    }
+    .header_nav>input:checked ~ .nav_ul{
+        opacity: 1;
+        transform: scaleY(1);
+        height: 300px;
+    }
+    .header_nav>label>.fa-times{
+        transform: scale(0);
+        transition: .5s;
+    }
+    .header_nav>input:checked ~ label>.fa-bars{
+        transform: scale(0);
+    }
+    .header_nav>input:checked ~ label>.fa-times{
+        transform: scale(1);
+    }
+}
+/*...................................Carousel Responsive.........................*/
+@media screen and (max-width: 740px){
+    .carousel>.carousel_slide>.content_box{
+        background-size: contain 100%;
+    }
+}
+@media screen and (max-width: 650px){
+    .inner_content_box .inner_link{
+        padding: 14px 13px;
+    }
+    .carousel>.carousel_slide>.content_box{
+        background-size: 100% center;
+        background-position-x: right;
+    }
+    .carousel>.carousel_slide>.prev{
+        left: 0px;
+    }
+    .carousel>.carousel_slide>.next{
+        right: 0px;
+    }
+    .inner_content_box p{
+        font-size: 13px;
+    }
+    .inner_content_box .inner_big{
+        font-size: 16px;
+    }
+    .inner_content_box p{
+        letter-spacing: 2px;
+    }
+    .inner_content_box .inner_big{
+        letter-spacing: 6px;
+    }
+}
+/*...................................Aside Responsive........................*/
+@media screen and (max-width: 750px){
+    aside>.aside_big{
+        margin-bottom: 15px;
+    }
+}
+@media screen and (max-width: 550px){
+    aside{
+        padding: 15px;
+    }
+    aside>.aside_big{
+        text-align: center;
+        margin-bottom: 15px;
+    }
+}
+/*............................Sec Power Work Responsive.......................*/
+@media screen and (max-width: 800px){
+    .sec_power_work{
+        padding-left: 10px;
+    }
+    .sec_power_work_item{
+        flex-basis: 100%!important;
+        height: 100%;
+    }
+    .sec_power_work .img_item img{
+        width: 80%;
+        height: 80%;
+        object-fit: contain;
+        margin: 30px auto;
+        display: block;
+    }
+    .sec_power_work p{
+        line-height: 25px;
+    }
+}
+/*...............................Section Launch Date Responsive...................*/
+@media screen and (max-width: 600px){
+    .sec_launch_date{
+        padding-left: 0px;
+        padding-right: 0px;
+        text-align: center;
+        text-indent: none;
+    }
+    .sec_launch_date .launch_icon{
+        text-indent: inherit;
+    }
+    .sec_launch_date strong{
+        text-indent: inherit;
+    }
+}
+/*...........................Section Power Build Responsive..................*/
+@media screen and (min-width: 1000px){
+    .sec_power_build> .power_build_wrapper{
+        width: 990px;
+    }
+    .power_build_wrapper>.power_build_item{
+        flex-basis: 320px;
+    }
+    .power_build_wrapper>.power_build_item:not(.not_margin_right){
+        margin-right: 8px!important;
+    }
+}
+@media screen and (max-width: 850px){
+    .sec_power_build> .power_build_wrapper{
+        width: 715px;
+    }
+    .power_build_wrapper>.power_build_item{
+        flex-basis: 350px;
+    }
+}
+@media screen and (max-width: 750px){
+    .sec_power_build> .power_build_wrapper{
+        width: 615px;
+    }
+    .power_build_wrapper>.power_build_item{
+        flex-basis: 300px;
+    }
+    .sec_power_build>.build_title{
+        font-size: 25px;
+    }
+}
+@media screen and (max-width: 650px){
+    .sec_power_build> .power_build_wrapper{
+        width: 515px;
+    }
+    .power_build_wrapper>.power_build_item{
+        flex-basis: 250px;
+    }
+   
+}
+@media screen and (max-width: 550px){
+    .sec_power_build> .power_build_wrapper{
+        width: 100%;
+        justify-content: center;
+    }
+    .power_build_wrapper>.power_build_item{
+        flex-basis: 400px;
+        margin-right: 0px !important;
+    }
+}
+/*................................Section Total Profit........................*/
+@media screen and (max-width: 500px){
+    .sec_total_profit .total_profit_item_txt{
+        padding: 0px 25px 0px 25px!important;
+    }
+}
+/*..................................Footer Responsive...........................*/
+@media screen and (max-width: 500px){
+    .footer_top_item_wrapper>.footer_link{
+        font-size: 14px;
+    }
+}
+@media screen and (max-width: 800px){
+    .bottom_footer_item{
+        justify-content: center;
+    }
+}
