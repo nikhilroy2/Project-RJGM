@@ -2,7 +2,7 @@
 *{
     box-sizing: border-box;
     scroll-behavior: smooth;
-    font-family: cursive;
+    font-family: verdana;
 }
 :root{
     --main-color: #000;
@@ -199,7 +199,7 @@ body{
 }
 .bottom_header_menu .value{
     float: right;
-    padding: 12px 18px;
+    padding: 12px 20px;
     background: rgba(0, 18, 69,.5);
     margin-right: 10px;
     margin-top: 0px;
