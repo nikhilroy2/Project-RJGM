@@ -1,6 +1,7 @@
 /*.............................Global Style..............................*/
 *{
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     scroll-behavior: smooth;
     font-family: verdana;
 }
@@ -34,6 +35,8 @@ body{
     top: 0px;
     left: 0px;
     position: absolute;
+    -webkit-transition: .5s;
+    -o-transition: .5s;
     transition: .5s;
     z-index: -1;
     border-radius: 10px;
@@ -55,10 +58,16 @@ body{
 }
 /*...................................Top Header Menu.....................*/
 .top_header_menu{
+    background: -webkit-linear-gradient(35deg,#0839c5, #800053);
+    background: -o-linear-gradient(35deg,#0839c5, #800053);
     background: linear-gradient(55deg,#0839c5, #800053);
     color: var(--top_header_menu_color);
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     padding: 0px 12px;
 }
 .top_header_lang{
@@ -69,7 +78,9 @@ body{
     display: none;
 }
 .top_header_lang input:checked ~ .lang_drop{
-    transform: scaleY(1);
+    -webkit-transform: scaleY(1);
+        -ms-transform: scaleY(1);
+            transform: scaleY(1);
     z-index: 100;
 }
 .top_header_lang>label{
@@ -100,11 +111,17 @@ body{
 }
 .top_header_lang>.lang_drop{
     position: absolute;
-    transform: scaleY(0);
+    -webkit-transform: scaleY(0);
+        -ms-transform: scaleY(0);
+            transform: scaleY(0);
     width: 135px;
     background: var(--bg-hover);
+    -webkit-transition: .5s;
+    -o-transition: .5s;
     transition: .5s;
-    transform-origin: top;
+    -webkit-transform-origin: top;
+        -ms-transform-origin: top;
+            transform-origin: top;
 }
 .top_header_lang>.lang_drop>a>span{
     padding: 0px 10px;
@@ -115,6 +132,8 @@ body{
     display: block;
     padding: 15px;
     text-decoration: none;
+    -webkit-transition: .5s color;
+    -o-transition: .5s color;
     transition: .5s color;
     color: var(--bg-hover);
 }
@@ -123,7 +142,8 @@ body{
     background: rgba(184, 5, 238, 0.273);
 }
 .top_header_connect{
-    transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
     z-index: 2;
 }
 .top_header_connect>span{
@@ -137,15 +157,19 @@ body{
     color: #fff;
     text-decoration: none;
     border-radius: 30px;
+    -webkit-transition: .5s;
+    -o-transition: .5s;
     transition: .5s;
     position: relative;
-    box-shadow: 0px 0px 2px black;
+    -webkit-box-shadow: 0px 0px 2px black;
+            box-shadow: 0px 0px 2px black;
     /* z-index: 200; */
 }
 .top_header_connect>a:hover{
     background: #fff;
     color: var(--bg-hover);
-    transform: perspective(1000px) rotateZ(-10deg);
+    -webkit-transform: perspective(1000px) rotateZ(-10deg);
+            transform: perspective(1000px) rotateZ(-10deg);
 
 }
 .top_header_connect>a::after{
@@ -158,26 +182,43 @@ body{
     content: "\f39e";
     font-family: "Font Awesome 5 Brands";
     border-radius: 50%;
+    -webkit-transition: .5s;
+    -o-transition: .5s;
     transition: .5s;
-    transform-origin: left;
+    -webkit-transform-origin: left;
+        -ms-transform-origin: left;
+            transform-origin: left;
     color: #fff;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 .top_header_connect>a:hover::after{
-    transform: perspective(1000px) rotateY(-130deg);
+    -webkit-transform: perspective(1000px) rotateY(-130deg);
+            transform: perspective(1000px) rotateY(-130deg);
 }
 /*.............................Bottom Header Menu...........................*/
 .bottom_header_menu{
     min-height: 100px;
+    background: -webkit-linear-gradient(35deg,#0839c5, #800053);
+    background: -o-linear-gradient(35deg,#0839c5, #800053);
     background: linear-gradient(55deg,#0839c5, #800053);
     overflow: hidden;
     position: relative;
 }
 .bottom_header_menu_wrapper{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: flex-end;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
     padding: 10px 0px;
 }
 .bottom_header_menu_wrapper>.skype_chat,
@@ -215,12 +256,20 @@ body{
 
 }
 .bottom_header_menu .site_logo{
-    flex-grow: 3;
+    -webkit-box-flex: 3;
+        -ms-flex-positive: 3;
+            flex-grow: 3;
     background: rgba(0, 18, 69,.5);
     margin: 0px 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     padding: 8px 15px;
 }
 
@@ -234,6 +283,7 @@ body{
 }
 /*......................................Nav Style.........................*/
 .header_nav{
+    position: -webkit-sticky;
     position: sticky;
     top: 0px;
     left: 0px;
@@ -244,14 +294,19 @@ body{
     margin: 0px;
     padding: 0px;
     list-style: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-around;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
 }
 .header_nav>ul>li>a{
     padding: 15px 20px;
     text-decoration: none;
     color: #fff;
     display: inline-block;
+    -webkit-transition: .5s background;
+    -o-transition: .5s background;
     transition: .5s background;
 }
 .header_nav>ul>li>a:hover{
@@ -304,8 +359,12 @@ body{
     height: 80px;
     border: 2px solid white;
     top: 50%;
-    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
     cursor: pointer;
+    -webkit-transition: .5s background-color;
+    -o-transition: .5s background-color;
     transition: .5s background-color;
     z-index: 50;
 }
@@ -326,7 +385,9 @@ body{
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
     color: white;
 }
 .carousel>.carousel_slide>.prev::before{
@@ -343,13 +404,16 @@ body{
 .carousel #radio2:checked ~ #two,
 .carousel #radio3:checked ~ #three{
     z-index: 100;
-    animation: 2s carousel_opacity ;
+    -webkit-animation: 2s carousel_opacity ;
+            animation: 2s carousel_opacity ;
 }
 /*...................................Carousel Inner Content box...................*/
 .carousel_slide .inner_content_box{
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
     left: 10%;
     color: white;
 }
@@ -368,6 +432,8 @@ body{
     background: white;
     color: black;
     text-decoration: none;
+    -webkit-transition: .5s background-color;
+    -o-transition: .5s background-color;
     transition: .5s background-color;
     text-transform: uppercase;
     margin-right: 12px;
@@ -382,45 +448,67 @@ body{
 }
 /*...................................Carousel For Animation..............*/
 .carousel #radio1:checked ~ #one .inner_content_box>p{
-    animation: 1.5s linear carousel_radio1_p;
-    animation-delay: .5s;
+    -webkit-animation: 1.5s linear carousel_radio1_p;
+            animation: 1.5s linear carousel_radio1_p;
+    -webkit-animation-delay: .5s;
+            animation-delay: .5s;
 }
 .carousel #radio1:checked ~ #one .inner_content_box>.inner_big{
-    animation: 1.5s linear carousel_radio1_inner_big;
-    animation-delay: .5s;
+    -webkit-animation: 1.5s linear carousel_radio1_inner_big;
+            animation: 1.5s linear carousel_radio1_inner_big;
+    -webkit-animation-delay: .5s;
+            animation-delay: .5s;
 
 }
 .carousel #radio2:checked ~ #two .inner_content_box>p{
-    animation: 1s linear carousel_radio2_p;
-    animation-delay: .5s;
+    -webkit-animation: 1s linear carousel_radio2_p;
+            animation: 1s linear carousel_radio2_p;
+    -webkit-animation-delay: .5s;
+            animation-delay: .5s;
 }
 .carousel #radio2:checked ~ #two .inner_content_box>.inner_big{
-    animation: 1.5s linear carousel_radio2_inner_big;
-    animation-delay: .5s;
+    -webkit-animation: 1.5s linear carousel_radio2_inner_big;
+            animation: 1.5s linear carousel_radio2_inner_big;
+    -webkit-animation-delay: .5s;
+            animation-delay: .5s;
 
 }
 .carousel #radio3:checked ~ #three .inner_content_box>p{
-    animation: 1s linear carousel_radio3_p;
-    animation-delay: .5s;
+    -webkit-animation: 1s linear carousel_radio3_p;
+            animation: 1s linear carousel_radio3_p;
+    -webkit-animation-delay: .5s;
+            animation-delay: .5s;
 }
 .carousel #radio3:checked ~ #three .inner_content_box>.inner_big{
-    animation: 1.5s linear carousel_radio3_inner_big;
-    animation-delay: .5s;
+    -webkit-animation: 1.5s linear carousel_radio3_inner_big;
+            animation: 1.5s linear carousel_radio3_inner_big;
+    -webkit-animation-delay: .5s;
+            animation-delay: .5s;
 
 }
 .carousel #radio1:checked ~ #one .inner_link,
 .carousel #radio2:checked ~ #two .inner_link,
 .carousel #radio3:checked ~ #three .inner_link{
-    animation: carousel_inner_link 4s;
+    -webkit-animation: carousel_inner_link 4s;
+            animation: carousel_inner_link 4s;
 }
 /*....................................Aside Style...............................*/
 aside{
     background: rgb(83, 115, 115);
     padding: 35px 15px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-flow: row wrap;
-    justify-content: space-evenly;
-    align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     z-index: 3000;
     position: relative;
 }
@@ -435,6 +523,8 @@ aside>.aside_link{
     color: black;
     text-decoration: none;
     display: inline-block;
+    -webkit-transition: .5s;
+    -o-transition: .5s;
     transition: .5s;
     text-transform: uppercase;
 }
@@ -446,22 +536,31 @@ aside>.aside_link:hover{
 .sec_power_work{
     min-height: 500px;
     padding: 100px 0px 40px 40px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
 }
 .sec_power_work .sec_power_work_item:first-child{
-    flex-basis: 65%;
+    -ms-flex-preferred-size: 65%;
+        flex-basis: 65%;
     padding-right: 40px;
 }
 .sec_power_work .img_item{
-    flex-basis: 35%;
-    flex: 2;
+    -ms-flex-preferred-size: 35%;
+        flex-basis: 35%;
+    -webkit-box-flex: 2;
+        -ms-flex: 2;
+            flex: 2;
 }
 .sec_power_work .img_item img{
     width: 100%;
     height: 70%;
-    object-fit: cover;
-    object-position: left;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: left;
+       object-position: left;
 }
 /*................................Section Power Work Text Style.....................*/
 .sec_power_work .power_work_title{
@@ -506,9 +605,16 @@ aside>.aside_link:hover{
     padding: 50px 0px;
 }
 .sec_power_build> .power_build_wrapper{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: flex-start;
-    flex-flow: row wrap;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
     /* border:2px solid blue; */
     width: 815px;
     margin: 0px auto;
@@ -516,28 +622,49 @@ aside>.aside_link:hover{
 
 }
 .power_build_wrapper>.power_build_item{
-    flex-basis: 400px;
+    -ms-flex-preferred-size: 400px;
+        flex-basis: 400px;
     min-height: 250px;
     margin-bottom: 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    flex-flow: column wrap;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column wrap;
+            flex-flow: column wrap;
     padding: 0px 20px;
+    background: -webkit-linear-gradient(35deg,#0839c5, #800053);
+    background: -o-linear-gradient(35deg,#0839c5, #800053);
     background: linear-gradient(55deg,#0839c5, #800053);
+    -webkit-transition: 1s;
+    -o-transition: 1s;
     transition: 1s;
     border-radius: 10px;
 }
 .power_build_wrapper>.power_build_item:hover{
-    transform: scale(1.02);
-    box-shadow: 0px 0px 6px black;
+    -webkit-transform: scale(1.02);
+        -ms-transform: scale(1.02);
+            transform: scale(1.02);
+    -webkit-box-shadow: 0px 0px 6px black;
+            box-shadow: 0px 0px 6px black;
+    background: -webkit-linear-gradient(145deg,#0839c5, #800053);
+    background: -o-linear-gradient(145deg,#0839c5, #800053);
     background: linear-gradient(-55deg,#0839c5, #800053);
 }
 .power_build_wrapper>.power_build_item:nth-child(odd){
     margin-right: 10px;
 }
 .power_build_item .build_icon>i.fa-clock{
-    transform: scaleX(-1);   
+    -webkit-transform: scaleX(-1);
+        -ms-transform: scaleX(-1);
+            transform: scaleX(-1);   
 }
 .power_build_item .build_icon>i{
     display: inline-block;
@@ -555,6 +682,8 @@ aside>.aside_link:hover{
 .power_build_item .build_level{
     font-weight: bolder;
     font-size: 18px;
+    -webkit-transition: .5s color;
+    -o-transition: .5s color;
     transition: .5s color;
 }
 .power_build_item:hover .build_level{
@@ -565,38 +694,57 @@ aside>.aside_link:hover{
     font-weight: normal;
     line-height: 25px;
     font-size: 15px;
+    -webkit-transition: .5s;
+    -o-transition: .5s;
     transition: .5s;
 }
 .power_build_item:hover .build_txt{
-    animation: build_txt 1s linear;
+    -webkit-animation: build_txt 1s linear;
+            animation: build_txt 1s linear;
     color: white;
 }
 /*....................................Section Total Profit.........................*/
 .sec_total_profit{
     min-height: 400px;
     /* border: 2px solid red; */
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-flow: row wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
     font-family: cursive;
     padding: 20px 0px;
 }
 .sec_total_profit .total_profit_item{
-    flex-basis: 400px;
+    -ms-flex-preferred-size: 400px;
+        flex-basis: 400px;
     /* border: 2px solid red; */
 }
 .sec_total_profit .img_profit{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
 }
 .sec_total_profit .img_profit img{
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
 }
 .sec_total_profit .total_profit_item:last-child{
-    flex: 5;
-    flex-basis: 450px;
+    -webkit-box-flex: 5;
+        -ms-flex: 5;
+            flex: 5;
+    -ms-flex-preferred-size: 450px;
+        flex-basis: 450px;
     min-height: 300px;
 }
 .sec_total_profit .total_profit_item_txt{
@@ -604,9 +752,18 @@ aside>.aside_link:hover{
 }
 /*....................................Section Service Site........................*/
 .sec_service_site{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-evenly;
-    flex-flow: row wrap;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    background: -webkit-linear-gradient(35deg,#0839c5, #800053);
+    background: -o-linear-gradient(35deg,#0839c5, #800053);
     background: linear-gradient(55deg,#0839c5, #800053);
     padding: 15px 0px;
 }
@@ -618,11 +775,22 @@ aside>.aside_link:hover{
 }
 /*....................................Footer......................................*/
 footer .footer_top_item{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    flex-flow: column wrap;
-    justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column wrap;
+            flex-flow: column wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     padding: 80px 0px 25px 0px;
+    background: -webkit-linear-gradient(35deg,#0839c5, #800053);
+    background: -o-linear-gradient(35deg,#0839c5, #800053);
     background: linear-gradient(55deg,#0839c5, #800053);
 }
 .footer_top_item_wrapper{
@@ -633,6 +801,8 @@ footer .footer_top_item{
     padding: 8px;
     color: white;
     text-decoration: none;
+    -webkit-transition: .5s;
+    -o-transition: .5s;
     transition: .5s;
     position: relative;
     font-size: 15px;
@@ -650,11 +820,20 @@ footer .footer_top_item{
     margin-bottom: 30px;
 }
 .bottom_footer_item{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     padding: 30px;
+    background: -webkit-linear-gradient(35deg,#0839c5, #800053);
+    background: -o-linear-gradient(35deg,#0839c5, #800053);
     background: linear-gradient(55deg,#0839c5, #800053);
-    flex-flow: row wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
 }
 .bottom_footer_item .bottom_footer_item1{
     color: white;
